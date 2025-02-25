@@ -1,0 +1,432 @@
+/* Navbar container */
+nav {
+  background-color: #2563EB; /* Blue background */
+  padding: 1rem; /* Padding around the navbar */
+  color: white; /* White text */
+}
+
+/* Main container for centering */
+.container {
+  max-width: 1200px; /* Maximum width for responsiveness */
+  margin: 0 auto; /* Center the navbar */
+  display: flex;
+  justify-content: space-between; /* Spacing between logo and links */
+  align-items: center; /* Align items vertically */
+}
+
+/* Navbar logo */
+nav .text-xl {
+  font-size: 1.25rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  color: white; /* White color for the logo */
+  text-decoration: none; /* Remove underline */
+}
+
+nav .text-xl:hover {
+  color: #A5B4FC; /* Light blue color on hover */
+}
+
+/* Navbar links */
+nav .space-x-4 {
+  display: flex;
+  gap: 1rem; /* Spacing between links */
+}
+
+nav a {
+  font-size: 1rem; /* Font size for links */
+  text-decoration: none; /* Remove underline */
+  color: white; /* White color for links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect on links */
+nav a:hover {
+  color: #A5B4FC; /* Light blue color when hovering */
+}
+
+/* Optional: Add active link styling */
+nav a.active {
+  border-bottom: 2px solid #A5B4FC; /* Active link indicator */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack logo and links on smaller screens */
+    text-align: center; /* Center the text */
+  }
+
+  .space-x-4 {
+    flex-direction: column; /* Stack the links vertically */
+    gap: 0.5rem; /* Reduce the gap between links */
+  }
+}
+
+/* General page styling */
+div.p-4 {
+  padding: 1rem; /* Add padding around the content */
+}
+
+h1.text-2xl {
+  font-size: 1.5rem; /* Font size for the title */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 1rem; /* Space below the title */
+  color: #333; /* Dark color for the title */
+}
+
+/* Grid layout for events */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create a responsive grid */
+  gap: 1rem; /* Space between grid items */
+}
+
+/* Event card styling */
+.grid .border {
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem; /* Padding inside the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
+  background-color: white; /* White background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effects on event cards */
+.grid .border:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Event name */
+h2.text-xl {
+  font-size: 1.25rem; /* Font size for the event name */
+  font-weight: 600; /* Semi-bold text */
+  color: #333; /* Dark text color */
+  margin-bottom: 0.5rem; /* Space below the event name */
+}
+
+/* Event description */
+p.text-gray-600 {
+  color: #4b5563; /* Light gray text for description */
+  margin-bottom: 1rem; /* Space below the description */
+}
+
+/* Styling for the "View Details" link */
+a.text-blue-500 {
+  color: #3b82f6; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium weight for the link */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect on the link */
+a.text-blue-500:hover {
+  color: #2563eb; /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1.text-2xl {
+    font-size: 1.25rem; /* Slightly smaller title on mobile */
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Stack cards in a single column on small screens */
+  }
+}
+
+/* General page styling */
+div.p-4 {
+  padding: 1rem; /* Add padding around the content */
+  background-color: #f9fafb; /* Light background for the page */
+  border-radius: 8px; /* Rounded corners for the content */
+}
+
+/* Title styling */
+h1.text-2xl {
+  font-size: 1.5rem; /* Font size for the title */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 1rem; /* Space below the title */
+  color: #333; /* Dark color for the title */
+}
+
+/* Calendar container styling */
+.react-calendar {
+  border: 1px solid #e5e7eb; /* Light border around the calendar */
+  border-radius: 8px; /* Rounded corners */
+  background-color: white; /* White background for the calendar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  max-width: 100%; /* Ensure calendar takes full width if needed */
+  margin: 0 auto; /* Center the calendar */
+  padding: 10px; /* Padding inside the calendar */
+}
+
+/* Styling for the calendar month name */
+.react-calendar__navigation button {
+  background-color: #2563eb; /* Blue background for navigation buttons */
+  color: white; /* White text */
+  font-weight: 600; /* Medium weight for the text */
+  border: none; /* Remove borders */
+  padding: 8px 16px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor change on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Hover effect for the calendar navigation buttons */
+.react-calendar__navigation button:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+}
+
+/* Day tiles styling */
+.react-calendar__tile {
+  border-radius: 8px; /* Rounded corners for day tiles */
+  padding: 10px; /* Padding for each day tile */
+  color: #333; /* Dark color for day text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for day tiles */
+.react-calendar__tile:hover {
+  background-color: #3b82f6; /* Blue background on hover */
+  color: white; /* White text color on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling for the active day tile */
+.react-calendar__tile--active {
+  background-color: #2563eb; /* Blue background for the active day */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text for the active day */
+}
+
+/* Styling for the selected day tile */
+.react-calendar__tile--hasActive {
+  background-color: #3b82f6; /* Light blue for selected days */
+  color: white; /* White text */
+}
+
+/* General page styling */
+div.p-4 {
+  padding: 1rem; /* Add padding around the content */
+  background-color: #f9fafb; /* Light background for the page */
+  border-radius: 8px; /* Rounded corners for the content */
+}
+
+/* Title styling */
+h1.text-2xl {
+  font-size: 1.5rem; /* Font size for the title */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 1rem; /* Space below the title */
+  color: #333; /* Dark color for the title */
+}
+
+/* User information styling */
+p {
+  font-size: 1rem; /* Font size for text */
+  color: #4b5563; /* Light gray text color */
+  margin-bottom: 1rem; /* Space below each paragraph */
+}
+
+/* Bold labels for user profile info */
+strong {
+  font-weight: 600; /* Medium weight for labels */
+  color: #333; /* Dark color for the labels */
+}
+
+/* Loading text */
+div.loading {
+  font-size: 1rem;
+  color: #2563eb; /* Blue text for loading state */
+  font-weight: 500; /* Medium weight */
+}
+
+/* Styling for the user info container */
+div.user-info {
+  background-color: white; /* White background for the info card */
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1.5rem; /* Padding inside the container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  h1.text-2xl {
+    font-size: 1.25rem; /* Slightly smaller title on mobile */
+  }
+
+  div.p-4 {
+    padding: 1rem; /* Ensure enough space on mobile */
+  }
+
+  p {
+    font-size: 0.95rem; /* Slightly smaller font size for text on mobile */
+  }
+}
+
+
+/* Responsive Design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .react-calendar {
+    width: 100%; /* Ensure the calendar takes up full width on smaller screens */
+  }
+
+  h1.text-2xl {
+    font-size: 1.25rem; /* Slightly smaller title on mobile */
+  }
+}
+/* General page styling */
+.min-h-screen {
+  min-height: 100vh; /* Ensure the page takes full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6; /* Light gray background for the page */
+}
+
+/* Form container styling */
+div.bg-white {
+  background-color: orange; /* White background for the form */
+  padding: 2rem 3rem; /* Padding inside the form container */
+  border-radius: 8px; /* Rounded corners for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
+  width: 100%; /* Full width on small screens */
+  max-width: 24rem; /* Maximum width for the form */
+}
+
+/* Title styling */
+h2.text-2xl {
+  font-size: 1.5rem; /* Font size for the title */
+  font-weight: bold; /* Bold title */
+  text-align: center; /* Center the title */
+  color: #333; /* Dark color for the title */
+  margin-bottom: 1.5rem; /* Space below the title */
+}
+
+/* Error message styling */
+p.text-red-500 {
+  color: #dc2626; /* Red color for the error message */
+  font-size: 1rem; /* Font size for error text */
+  margin-bottom: 1rem; /* Space below the error message */
+  text-align: center; /* Center the error message */
+}
+
+/* Label styling */
+label {
+  display: block; /* Make the label block-level */
+  font-size: 1rem; /* Font size for labels */
+  color: #4b5563; /* Light gray text color */
+  margin-bottom: 0.5rem; /* Space below the label */
+}
+
+/* Input field styling */
+input {
+  width: 100%; /* Full width for input fields */
+  padding: 0.75rem 1rem; /* Padding inside the input fields */
+  border: 1px solid #e5e7eb; /* Light gray border for inputs */
+  border-radius: 8px; /* Rounded corners for inputs */
+  font-size: 1rem; /* Font size inside input fields */
+  color: #333; /* Dark text color */
+  transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+/* Focus styling for input fields */
+input:focus {
+  border-color: #3b82f6; /* Blue border when input is focused */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* Soft blue shadow on focus */
+}
+
+/* Button styling */
+button {
+  width: 100%; /* Full width for the submit button */
+  background-color: #2563eb; /* Blue background for the button */
+  color: white; /* White text color */
+  padding: 0.75rem 1rem; /* Padding inside the button */
+  font-size: 1rem; /* Font size for the button */
+  border-radius: 8px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor for the button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect for the button */
+button:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Focus effect for the button */
+button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* Soft blue shadow on focus */
+}
+
+/* Link to Login */
+p.mt-4 a {
+  color: #2563eb; /* Blue color for the link */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium font weight */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for the login link */
+p.mt-4 a:hover {
+  color: #1e40af; /* Darker blue color on hover */
+  text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  div.bg-white {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+    max-width: 100%; /* Make form full width on mobile */
+  }
+
+  h2.text-2xl {
+    font-size: 1.25rem; /* Slightly smaller title for mobile */
+  }
+
+  input, button {
+    font-size: 0.9rem; /* Slightly smaller font size for inputs and button */
+  }
+}
+
+/* You can customize this in your global CSS */
+.recommendations-slideshow {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #4b5563; /* Change to match your theme */
+}
+
+.swiper-pagination-bullet {
+  background-color: #4b5563; /* Match pagination dot color */
+}
+
+/* Position the Recommendations component at the top-right corner */
+.recommendations-section {
+  position: absolute;
+  top: 35%;   /* 4% from the top */
+  right: 4%;  /* 4% from the right */
+  width: 450px; /* Set a width for the container (you can adjust as needed) */
+  z-index: 10; /* Ensure it's on top of other content */
+}
+
+
+
