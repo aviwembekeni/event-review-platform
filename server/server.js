@@ -6,7 +6,7 @@ const OpenAI = require("openai");
 
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
-const recommendationRoutes = require('./routes/recommendationsRoutes');
+const recommendationRoutes = require('./routes/recommendationRoutes');
 
 dotenv.config();
 const app = express();

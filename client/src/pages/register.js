@@ -6,13 +6,15 @@ const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('user');
   const [error, setError] = useState('');
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/auth/register', { username, email, password });
+      const response = await axios.post('/api/auth/register', { username, email, password, role });
       if (response.data.message) {
         navigate('/login'); // Redirect to login page after successful registration
       }
@@ -57,6 +59,21 @@ const Register = () => {
               required
             />
           </div>
+          {/* Role selection */}
+      <div  className="mb-4">
+        <label htmlFor="role" className="block text-gray-700">Role</label>
+        <select
+          id="role"
+          name="role"
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="user">User</option>
+          <option value="event_creator">Event Creator</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
           <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"

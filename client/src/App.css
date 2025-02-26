@@ -419,13 +419,13 @@ p.mt-4 a:hover {
   background-color: #4b5563; /* Match pagination dot color */
 }
 
-/* Position the Recommendations component at the top-right corner */
+Position the Recommendations component at the top-right corner
 .recommendations-section {
   position: absolute;
   top: 35%;   /* 4% from the top */
   right: 4%;  /* 4% from the right */
   width: 450px; /* Set a width for the container (you can adjust as needed) */
-  z-index: 10; /* Ensure it's on top of other content */
+  /* z-index: 10; Ensure it's on top of other content */
 }
 
 

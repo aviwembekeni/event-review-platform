@@ -8,11 +8,11 @@ import Recommendations from '../components/recommendations';
 const Home = () => {
   const [events, setEvents] = useState([]);
 
-  useEffect(() => {
-    axios.get('/api/events')
-      .then((response) => setEvents(response.data))
-      .catch((error) => console.error('Error fetching events:', error));
-  }, []);
+  // useEffect(() => {
+  //   axios.get('/api/events')
+  //     .then((response) => setEvents(response.data))
+  //     .catch((error) => console.error('Error fetching events:', error));
+  // }, []);
 
   return (
     <div className="p-4">

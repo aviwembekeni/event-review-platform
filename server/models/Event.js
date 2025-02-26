@@ -5,8 +5,10 @@ const eventSchema = new mongoose.Schema({
   date: { type: Date, required: true },
   location: { type: String, required: true },
   description: { type: String },
-  organizer: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Link to User
   reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
 });
 
 module.exports = mongoose.model('Event', eventSchema);
+
+
